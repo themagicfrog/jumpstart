@@ -442,5 +442,14 @@ details[open] > summary {
     width: auto;
     margin: 2em auto;
   }
+  img[src$="niceconsole.png"],
+  img[src$="jumpstartstickers.png"] {
+    max-width: 90vw;
+    max-height: 40vw;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+  }
 }
 
