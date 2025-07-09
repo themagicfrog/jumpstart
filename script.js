@@ -14,4 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
       winSound.play();
     });
   }
+
+  // Gallery scroll arrow logic
+  const galleryScroll = document.getElementById('gallery-scroll');
+  const galleryNext = document.getElementById('gallery-next');
+  if (galleryScroll && galleryNext) {
+    galleryNext.addEventListener('click', function() {
+      const card = galleryScroll.querySelector('.gallery-card');
+      if (card) {
+        galleryScroll.scrollBy({
+          left: card.offsetWidth + 32, // 32px gap
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
 });

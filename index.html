@@ -12,10 +12,10 @@
 <body>
   <header>
     <img src="assets/jumpstart_title.gif" class="title-animation">
-    <p>a Hack Club YSWS</p>
-    <h2>Build a game in one month for 35 hours!</h2>
-    <h2>Earn stickers and a high-quality gaming console to run your game!</h2>
-    <img src="assets/gameconsole.png" id="gameconsole-img">
+    <p>a beginner-friendly Hack Club YSWS</p>
+    <h2>Build a game in one month for 20 hours!</h2>
+    <h2>Earn a high-quality gaming console to run your game and a stickersheet!</h2>
+    <img id="gameconsole-img" src="assets/gameconsole.png">
     <audio id="win-sound" src="assets/winsound.wav" preload="auto"></audio>
     <div class="scroll-arrow" onclick="scrollToInfo()" tabindex="0" aria-label="Scroll down" role="button">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,13 +27,27 @@
     <h2>How Does This Work?</h2>
     <div class="step-container">
       <div class="step-content">
+        <h3>Quick Overview</h3>
+        <p>If you have experience making games or none at all, this program is for you! Learn to make a game from scratch in one month and earn an epic gaming console to play it on (and some cool stickers).</p>
+        <p>1. Brainstorm your game concept, and post your game idea in #jumpstart</p>
+        <p>2. Build your game for 20 hours and post an update message in #jumpstart when you hit 10 hours</p>
+        <p>3. Publish to Itch.io and make a Youtube gameplay video</p>
+        <p>4. Post a ship post in #jumpstart with your final game, and submit to the form</p>
+        <p>5. Get your console and stickersheet!</p>
+      </div>
+      <div class="step-image">
+        <img src="assets/joystick.png" alt="Joystick" class="small-joystick">
+      </div>
+    </div>
+    <div class="step-container">
+      <div class="step-content">
         <h3>1. Plan your Game </h3>
         <p>Choose what kind of game you want to make (puzzle, platformer, fighting, simulation, racing...) Think about the features you want to add, the theme you want your game to have, and what the actual gameplay will be like. </p>
         <p>Pick a game engine to use. If this is your first time, use <a href="https://godotengine.org/" target="_blank">Godot</a>. If you have prior game dev experience, you can use <a href="https://unity.com/" target="_blank">Unity</a>.</p>
-        <p>If you need a start, go to <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1's website</a> and there are many very comprehensive beginner-friendly guides to get you started on making a platformer in Godot.</p>
+        <p>If you need a start, go to <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1's website</a> and there is a comprehensive beginner-friendly guide to get you started on making a platformer in Godot.</p>
         <p>Once you have an idea for your game, post a message in the #jumpstart channel with a one-liner for your game, a couple features you want to add, the game engine you will be using, if you've done game dev before, and any other ideas about your game that you have.</p>
         <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message</summary>
+          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
           <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
 GAME IDEA
 name of game: signal lost
@@ -54,32 +68,32 @@ other notes: something like Celeste, pixel art style, fast-paced
     </div>
     <div class="gallery-scroll">
       <div class="gallery-card">
-        <img src="assets/signallostdemo.gif">
-        <h3>Signal Lost</h3>
-        <p>A space platformer with gravity changing and dangerous plants.</p>
-        <p>Made by Estella Gu for <a href="https://juice.hackclub.com/games" target="_blank">Juice</a> you can play it at <a href="https://themagicfrog.itch.io/signal-lost" target="_blank">here</a>!</p>
-      </div>
-      <div class="gallery-card">
-        <img src="assets/desertdunes.gif">
-        <h3>Desert Dunes</h3>
-        <p>A desert platformer where you collect coins.</p>
-        <p>Made by Sophia Pu for <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1</a>, you can play it at <a href="https://platinumplat.itch.io/desert-dunes" target="_blank">here</a>!</p>
-      </div>
-      <div class="gallery-card">
         <img src="assets/euclidia.gif">
         <h3>Euclidia</h3>
-        <p>An adventure platformer where you collect cards and use rays to get around.</p>
-        <p>Made by Rohan V-F for <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1</a>, you can play it at <a href="https://quantumkya.itch.io/euclidia" target="_blank">here</a>!</p>
+        <p>An adventure platformer where you collect cards, use rays to get around, and solve puzzles.</p>
+        <p>Made by Rohan V-F in 20 hours for <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1</a>, you can play it at <a href="https://quantumkya.itch.io/euclidia" target="_blank">here</a>!</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/bricklandadventures.gif">
+        <h3>Brickland Adventures</h3>
+        <p>An adorable pink elephant where you battle mushrooms and find your way through a maze of bricks to meet your duck friend!</p>
+        <p>Made by Sofia G in 12 hours for <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1</a>, you can play it at <a href="https://sofiamatosg.itch.io/brickland-adventures" target="_blank">here</a>!</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/signallostdemo.gif">
+        <h3>Signal Lost</h3>
+        <p>A space platformer where you are an astronaut trying to find rocket parts to go home with gravity changing, dangerous plants, and oxygen bubbles.</p>
+        <p>Made by Estella Gu for <a href="https://juice.hackclub.com/games" target="_blank">Juice</a> you can play it at <a href="https://themagicfrog.itch.io/signal-lost" target="_blank">here</a>!</p>
       </div>
     </div>
     <div class="step-container">
       <div class="step-content">
         <h3>2. Build your Game</h3>
-        <p>Spend 35 hours building a game! Track your time using Hackatime and make regular commits to a Github repository for your game (<a href="https://www.youtube.com/watch?v=5H4A74FIEtg" target="_blank">Github setup</a> and <a href="https://www.youtube.com/watch?v=qpXxcvS-g3g" target="_blank">Unity Github setup</a>). You can install Godot hackatime <a href="https://github.com/BudzioT/Godot_Super-Wakatime" target="_blank">here</a> and Unity hackatime <a href="https://hackatime.hackclub.com/docs/editors/unity" target="_blank">here</a></p>
+        <p>Spend 20 hours building a game! Track your time using Hackatime and make regular commits to a Github repository for your game (<a href="https://www.youtube.com/watch?v=5H4A74FIEtg" target="_blank">Godot Github setup</a> and <a href="https://www.youtube.com/watch?v=qpXxcvS-g3g" target="_blank">Unity Github setup</a>). You can install Godot hackatime <a href="https://github.com/BudzioT/Godot_Super-Wakatime" target="_blank">here</a> and Unity hackatime <a href="https://hackatime.hackclub.com/docs/editors/unity" target="_blank">here</a>.</p>
          <p>If you need a start, go to <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1's website</a> and there are many beginner-friendly guides to get you started on making a platformer in Godot.</p>
-        <p>Once you hit 10 hours and 20 hours, you must post a message in #jumpstart with your Github repository linked, a screen-recording of your gameplay, a list of what features you added, what the most challenging thing was, and what you are planning on adding next. </p>
+        <p>Once you hit 10 hours, you must post a message in #jumpstart with your Github repository linked, a screen-recording of your gameplay, a list of what features you added, what the most challenging thing was, and what you are planning on adding next. </p>
         <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message</summary>
+          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
           <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
 10-HOUR UPDATE
 githubrepo: https://github.com/themagicfrog/signal-lost
@@ -94,7 +108,7 @@ next up: add more levels, add aliens??, make some cool effects
 *ATTACH SHORT SCREEN RECORDING OF YOUR GAMEPLAY*
           </pre>
         </details>
-        <p>If you spend more than 35 hours, make sure to post an update message in #jumpstart every 10 hours. You will need these update messages to be approved to earn the console when you submit.</p>
+        <p>If you spend more than 20 hours, make sure to post an update message in #jumpstart every 10 hours. You will need these update messages to be approved to earn the console when you submit.</p>
       </div>
 
     </div>
@@ -102,9 +116,9 @@ next up: add more levels, add aliens??, make some cool effects
       <div class="step-content">
         <h3>3. Ship Your Project</h3>
         <p>Upload your game to <a href="https://itch.io/" taraget="_blank">Itch.io</a>, a website where people share and play video games. Make an account, export your game, and publish it to the world. Also, you'll need to record a gameplay video of you playing through your entire game and publish it on Youtube. </p>
-        <p>Share your project in #jumpstart with an Itch link, gameplay video, total hours spent, a description, list of features,and your game-making process.</p>
+        <p>Share your project in #jumpstart with an Itch link, gameplay video, total hours spent, a description, list of features, and your game-making process.</p>
         <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message</summary>
+          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
           <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
 SHIP POST
 githubrepo: https://github.com/themagicfrog/signal-lost
@@ -129,15 +143,15 @@ process: first time making a game using Godot, so i learned a lot.... etc..
     <div class="step-container">
       <div class="step-content">
         <h3>4. Submit to Form</h3>
-        <p>Submit your game to the form! You must have the following: links to the messages in #jumpstart you sent (original game idea, 10-hour check-in, 20-hour check-in, and final ship post). You must have an Itch.io link, your Github repo link, Youtube gameplay video, Hackatime proof for your time spent, and a written descriptions.</p>
+        <p>Submit your game to the form! You must have the following: links to the messages in #jumpstart you sent (original game idea, 10-hour check-in, and final ship post). You must have an Itch.io link, your Github repo link, Youtube gameplay video, Hackatime proof for your time spent, and a written descriptions.</p>
         <button onclick="window.open('https://forms.hackclub.com/jumpstartv2', '_blank')">SUBMISSION FORM</button>
       </div>
     </div>
     <div class="step-container">
       <div class="step-content">
         <h3>5. Get your Console! CONGRATS! </h3>
-        <p>If you project is approved, you will be shipped a gaming console and a Jumpstart stickersheet! The gaming console is a Retroid Pocket Classic Handheld. It is very high-quality, runs on Android 14, has Wifi and Bluetooth, and you will be able to upload your game (Godot or Unity) on the console and play it.</p>
-        <img src="assets/retroid.png">
+        <p>If you project is approved, you will be shipped a gaming console and a Jumpstart stickersheet! The gaming console is a Anbernic RG353P. It is very high-quality, runs on Android 11 and Linux, has Wifi and Bluetooth, and has a good amount of RAM and storage. The best part is that you will be able to upload your game on the console and play it.</p>
+        <img src="assets/niceconsole.png">
         <img src="assets/jumpstartstickers.png">
       </div>
     </div>
@@ -145,7 +159,7 @@ process: first time making a game using Godot, so i learned a lot.... etc..
 
   <section id="end">
     <h1>JUMPSTART NOW</h1>
-    <p>Build a game, earn a gaming console and stickers!</p>
+    <p>Build a game, earn a gaming console and a stickersheet!</p>
   </section>
 
   <footer>
