@@ -1,0 +1,530 @@
+GAME IDEA
+name of game: Resoulate
+type of game: rhythm roguelike!
+one liner: a game that combines both the elements of a rhythm game and a roguelike for absolute chaos!
+features:
+circle note rhythm aspect
+enemies
+random stages
+upgrade cards
+variety of notes that have different effects, makes it more interesting for the player with abilities/upgrades
+innate/starter abilities
+gameplay: enemies on the top, a rhythm bar at the bottom, where you have to hit notes to use your abilities to attack the enemy. enemies can attack back, where you can also hit notes to dodge attacks. will be a roguelike, meaning enemy attacks will be random, you gain buff/upgrade cards when completing levels :slightly_smiling_face:.
+game engine: godot with gdscript
+experience: a LOT of minecraft modding, some background in machine learning. i have a deep interest in creating games, so this would be stepping out my comfort zone from minecraft
+other notes: i do feel like this might be ambitious with limited time, so ill try to keep it simple.
+Daxz
+
+GAME IDEA
+name of game: idk/something to do with conveyors
+type of game: zachtronics-like/puzzle
+one-liner: a factory-building game about cramming as much efficiency into as little space as possible
+features:
+- conveyor belts
+- material conversions
+gameplay: grid-based puzzler where you rotate and place different tiles in order to match a level's expected output (given fixed inputs)
+game engine: pygame
+experience: 5 years coding experience. majority in pygame making games.
+other notes: really minimal art style, maybe around 20 levels.
+Elly
+
+GAME IDEA
+Game Name: Rigged Basketball
+Game Genre: Arcade style, Sports
+Description: You play as a basketball player using a remote to move the hoop. Your goal is to catch as many basketballs as you can without dropping any, as the thrower speeds up over time.
+Features:
+- An online leaderboard, run on Quiver
+- Alternating animations for the thrower and the angered members of the opposing team
+Gameplay: Moving the hoop to catch basketballs
+Game Engine: Godot
+Experience: Published 1 godot game and 1 unity game, Made 2 sprig games, and have experience in beginner engines (scratch, roblox)
+Other Notes: Simple style, assets will either be found online or made in inkscape
+Aperaine
+
+GAME IDEA
+Game Name: A Stacking Chance
+Game type: Rougelike/Strategy
+One-liner: A Rougelike strategy game where you have to dismatle a tower (Jenga style) put each piece has a special ability without the tower falling down
+Features:
+Randomised level generation
+Local highscore system
+Deck/ability building
+Chaotic piece powers
+Gameplay: You start with a randomly generated tower and you have to remove pieces one by one while dealing with their powers (fire which spreads to other pieces, ice which makes pieces slippery etc.) and you have to remove enough pieces to reach a certain score, where then the tower will regenerate and grow, after you finish a level you can pick from a new modifier (you get to select more pieces, increased multiplier etc) the goal is to get the tower to the height of 100. If the tower falls over you lose!
+Game engine: Unity
+Experience: Around 3.5 years of game development with Unity and GameMaker, primarily focusing on game jams
+Other notes: N/A
+Vertex
+
+GAME IDEA
+name of game: Yak Stack
+type of game: endless runner
+one-liner: stack yaks in different configurations to bypass tricky terrain, to lead The Big Moo to safety away from an incoming tsunami
+features:
+- unlock different speeds of yak spawming, multiple yak spawners
+- different stack configurations (e.g. conga, vertical stack, pyramid...)
+- unlockable yak styles
+gameplay: levels (not sure how many) and also infinite play mode (aim for distance travelled or highest yak stack)
+game engine: Godot
+experience: first time game dev but plenty of programming experience
+other notes: i am trying to make this as silly as possible
+Sophia
+
+GAME IDEA
+name of game: Not Decided
+type of game: Physics-based, action !
+one-liner: spinning tops battle where you have to discover combos and defeat the AI opponent!
+features:
+-- realistic spin physics with stamina decay.
+-- AI battles.
+-- knockouts.
+-- cool animations.
+-- Charge your tops before the bttle starts!
+gameplay: you control a spinning top inside an arena. You have to discover different combos to quickly knock the AI enemy out  from the stadium or last longer.
+game engine: Unity!
+experience:  First time using Unity!
+other notes: inspired by Beyblade!
+Mustafa A.
+
+GAME IDEA
+Game name: SkyBound
+Game type: A rogue-like game
+One-liner: You must battle an onslaught of enemy airships to survive and find the gem.
+Features:
+Turn based combat
+Unlockable ships/crew.
+Upgrades and new weapons.
+An interactive map.
+Gameplay: You can choose some limited airships to play. As you defeat enemy ships, you will unlock and discover more ships and crew. You will get upgrades and face fleets of pirates. Every battle brings you closer to the Storm Sphere, the only hope for humanity to survive.
+Game engine: Godot
+Experience: Beginner
+Other notes:
+Ziqi G.
+
+GAME IDEA
+Game Name: BounceBack
+Game Genre: 2D Platformer
+Description: You're a rubbery blob trying to escape a colorful cartoon factory. But there's a twist — you can't walk. You can only bounce off walls, floors, and obstacles to move forward. Bounce with precision, solve puzzles, and avoid traps as you escape the BounceLab.
+Features:
+One-button bounce control
+Momentum-based wall movement
+Puzzle-platformer levels with switches, traps, and moving platforms
+Collectibles to unlock new skins or abilities
+Gameplay: You play as a round rubber blob that only moves by bouncing. Pressing a button launches you in a direction, and you’ll bounce off any surface — but bounce too fast or the wrong way and you hit a trap! Each level introduces new elements like bounce pads, lasers, doors, or rotating blocks. Your job is to master angles, physics, and timing to escape. Simple to start, hard to master!
+Game Engine: Godot (learning it while building this!)
+Experience: This is my first game, and I’ve never used Godot before — but I’ve built web apps and done some programming (JS, Python). I’ll be following tutorials and gradually customizing the game with my own features and art.
+Other Notes:
+Turbash N.
+
+GAME IDEA
+name of game: Space Runner
+Type of game: endless runner
+One-liner: The main character is running from the enemies in different planets
+Features:
+  - flying bombs
+  - Coins
+  - Extra abilities by collecting letters to finish a word /finishing tasks
+  - lasers
+Gameplay: This game is endless, and the player has to dodge the bombs that come toward him, escape lasers, and collect coins and other "cards" that give the character new abilities.
+game engine: unity
+experience: this is my first time creating games!!
+Other notes: the backgrounds keep changing as the character goes to the other planets. I will be using tutorials to learn and make changes to my game.
+Meghna
+
+GAME IDEA
+Name: no name yet :O
+Type of game: roguelite(ish)
+One-liner: procedural dungeon crawler where you can leave at any time or go deeper to find better loot at the risk of your life
+Features:
+ -Spell based combat
+  -Melee combat (if i have time)
+ -Procedural dungeon generation
+Gameplay: Explore a procedurally generated dungeon in search of riches, but dying means losing everything you brought with you to explore
+Game engine: godot probably
+Experience: Counterspell pygame (also more programming experience outside of game dev!)
+Other notes:
+Michael H.
+
+GAME IDEA
+Game name: Super PolySpawn Wars
+Game type: Classic 2D Arcade Space Shooter
+One-liner: A fast, fun, and retro-inspired space shooter with powerups, bosses, and intense action.
+Features:
+Classic arcade vibes with cool modern polish
+Powerups like speed boosts, triple shots, shields, and health
+Boss battles with increasing difficulty
+A smooth 30 FPS experience(I guess that's OK)
+Parallax scrolling background for that NEXT LEVEL space feel
+Score system based on your performance like how many kills
+Pause or quit anytime
+Temporary invincibility when you take damage (because everyone deserves a second chance)
+Gameplay: You control a nimble spaceship in deep space, rotating and firing with precision using real-time trigonometry. Waves of enemies come at you, each one more intense than the last. Powerups keep you alive a bit longer, bosses keep you guessing, and the action never really stops. It’s fast, skill-based, and totally addictive.
+Game engine: UNITY
+Experience: I’ve been into game development for quite a while now, mainly working with Unity and C#. I’ve built multiple small projects and prototypes, learning about prefabs, animations, physics, and system design along the way. A while ago, I shifted my focus to cybersecurity and AI — areas I’m deeply passionate about and currently exploring in depth.  But recently, I decided to jump back into game dev temporarily — partly because I missed the creative process, and partly because I have a personal reason: I’m building this game with the hope of earning enough to buy a gaming console for my sister's birthday on July 23rd. She’s been wishing for one for a long time, and this felt like the perfect opportunity to make that happen.  After this project, I’m also planning to experiment with Unreal Engine to build a 3D horror game — just for the fun of pushing myself into something new and different.  So while I may not be here in game dev forever, right now I’m fully in — building, learning, and creating with purpose.
+Other notes: My English is not that good so i used Grammarly to make this grammatically correct at least while writing these :cry:
+Anonymous
+
+GAME IDEA
+Name: Corruption-Lab
+Type of game: 2D puzzle-platformer with arcade-action vibes
+One-liner: Bounce your way through the lab filled with corrupted elements
+Features:
+A corruption-meter sidebar at the right side of the screen
+Different music based on your corruption level
+Different backgrounds based on your corruption level
+Touching certain areas grant corruption
+Some rare collectibles grant cool skins or abilities but spike corruption
+Special tiles reduce corruption
+Game can be paused and progress can be saved at any time
+Gameplay: You play as a bouncing blob that absorbs corrupted energy when interacting with different areas in the factory which will increase your corruption gauge and that alters the visuals and difficulty of the game.
+Game engine: Godot
+Experience: This is my first game I have never created a game in Godot.
+Shweta
+
+GAME IDEA
+Name: Captain Redbeard's Adventure
+Type: 2D platformer
+One-liner: A lego-themed platformer where you are a pirate on a mission to rescue your kidnapped parrot.
+Features:
+Design heavily inspired by classic lego pirates
+Different enemy types
+Special item to collect in each level
+Coins to collect as you go
+Gameplay: TBC.
+Game engine: Godot
+Experience: First time :D
+Other notes: Heavily inspired by the 2D browser-based lego platformers of the 2010s.
+Aly
+
+GAME IDEA
+name of game: Gridlock
+type of game: Puzzle
+one-liner: a puzzle game where you place Tetris like blocks on a grid strategically while avoiding placing the blocks on blockers on the grid
+features:
+block placing
+blockers on the grid
+randomly generated blocker placement gameplay: You have to place down the blocks on the grid till the grid is filled. You cannot place the locks on the blocks which are scattered around the grid. After the puzzle is completed it gives you a score based off of different variables including time spent solving.
+game engine: Godot
+experience: Some experience in Godot
+other notes: None
+Jackson W.
+
+GAME IDEA
+name of game: TBD
+type of game: horde survivor (like vampire survivors)
+one-liner: Survive increasingly intense rounds by upgrading one weapon with stacking powers
+features:
+- Increasingly dangerous horde rounds with enemies that drop xp
+- xp that when filled up gives you a choice between 3 upgrades
+- weapon upgrades that are designed to stack, e.g. a shotgun upgrade that makes your gun shoot multiple shots, or a flame upgrade that sets your bullets on fire
+gameplay: endless rounds, player tries to survive as long as possible & beat their last score. Upgrading their weapon along the way.
+game engine: Godot
+experience: Juice, Neighborhood's hacktendo & other general godot things
+other notes: This is such a cool program :))
+Armand
+
+GAME IDEA
+Game name: Peak of destiny
+Game Genre: 2d Platformer (like bread and fred)
+Description: A hard platformer game about hiking on a wild mountain all on your own, no one will be there to help you after you start hiking, throw climbing hooks to unnaccesible parts of the mountain and ropes to the hooks so you can go higher and higher, until you reach the end. 
+Features:
+- Throwing hooks to different kinds of surfaces to climb, because the player's jump is very short.
+- Depending the time you take to various checkpoints, you'll unlock new equipment or new hooks or ropes.
+- You'll need to have item distribution, cause H2O will be helpful, but if you use it, you'll have no more till you A. Lose all your lives or B. Reach the checkpoints around the mountain
+Gameplay:  Get the higher you can on the mountain, while resguarding yourself from occasional blizzards, throw hooks while having into account gravity, wind speeds and stuff, with
+Game Engine: Godot
+Experience: Making of discord bots, websites and some other stuff, with some participation in national hackatons.
+Other Notes: I hope i get a console, cause i have never had a single one :)
+Jacobo P.
+
+GAME IDEA
+name of game: Auto-Mate
+type of game: puzzle
+One-liner: A grid-based factory building puzzle game
+features:
+- conveyor belts
+- crafting machines
+- multiple crafting recipes
+gameplay: There will be a grid with a goal area and a material area. You will get resources from the material area, and you will design a factory to make a robot item and put it in the goal area
+game engine: Godot
+experience: first time!
+Other notes: Factorio art style
+The_Unicycling_1
+
+GAME IDEA
+Game name: Kitchen Alchemist
+Game type: 2D Puzzle / Time-management
+One-liner: Cook enchanted dishes using magical ingredients and become the ultimate Kitchen Alchemist!
+Features:
+Drag-and-drop cooking mechanics
+A magical recipe book that unlocks as you progress
+Special ingredients with magical effects (e.g., Fire Pepper, Time Crystal)
+Countdown timer and star-based scoring system
+In-game currency system: earn coins for successful dishes
+Magic Market (Shop) where players buy:
+Gameplay boosts (e.g., extra time, hint scrolls)
+New magical ingredients
+Cosmetic upgrades (kitchen tools, cauldrons)
+Simple level progression with increasing difficulty
+Fun visual feedback and sounds for success/failure
+Gameplay: You play as an apprentice alchemist-chef in a magical world. Each level presents recipes that must be cooked by dragging the correct ingredients into a cauldron before time runs out. Using magical ingredients can cause special effects — both helpful and chaotic. Players earn coins based on how quickly and accurately they complete levels. Between levels, players can visit the Magic Market, where they spend coins on powerful upgrades, rare ingredients, or stylish kitchen items. The game becomes progressively harder, introducing more complex recipes, faster timers, and new challenges.
+Game engine: Godot
+Experience: I have no prior game development experience but I’m learning Godot. I have a web development background and recently built a recipe collector website. This is my first solo game project.
+Other notes: Focus is on fun, simplicity, and magical cooking vibes.
+May later connect to my real-world recipe website.
+Visual style: playful, colorful, possibly cartoon-inspired.
+Anas H.
+
+GAME IDEA
+name of game: Wake of the forgotten
+type of game: FPS shooter
+one-liner: Survive waves of zombies, that come in swarms like hexagonal all 4 sides, etc.
+features:
+harder waves every time, theres a 1/10 chance a zombie drops a coin
+coins give upgrades like time stop, npc hire, double ammo.
+maybe tanks
+operations/sidequests too
+gameplay: infinite waves, survive for as long as you can.
+game engine: Unity
+experience: Juice
+Hridya A.
+
+GAME IDEA
+name of game: Coin Grabber
+type of game: side-scrolling auto-runner platformer
+one-liner: Grab all the coins in the game using multipe platforms and be careful not to die
+features:
+multiple platforms to jump and placed at the top right sequentially
+A counter for coins that track how many coins you have claimed
+If you claim all coins, you win and the you win text appears in a different screen with a play again button
+If you get hit by an enemy or fall down, you lose and the you lose text appears in a different screen, with a play again button
+gameplay: Limited amount of tiles and platformers, grab all the coins to win, even if you don't grab all coins, you can go back, but be careful
+game engine: Godot
+Pranav
+
+GAME IDEA
+Game name: Ascendancy
+Game type: Platformer x RPG
+One-liner: Platformer meets RPG, in this exciting tower-climbing game.
+Features:
+Platformer to climb tower
+Inspired by an RPG, features moving enemies
+Evolve equipment/abilities on the way up
+Boss fights as you climb
+Wall jumping
+Gameplay: You'll climb a tower, and on the way up, face different enemies, including some bosses. You'll be able to evolve, and upgrade weapons/armour/smth with in-game currency. There will be equipment, like grappling hooks, that you can buy as well.
+Game engine: Godot
+Experience: I've made a few games with Godot (for High Seas).
+Other notes:
+David
+
+GAME IDEA
+Game name: to be decided
+Game type: platformer
+One-liner: Every spell you find brings you closer to the final Horcrux — if the Dementors don’t get you first
+Features:
+multiple levels
+collectible items
+enemy chases
+destructible platforms
+hidden goals, and a touch of magic
+expect vines, trapdoors, and a few surprises
+Gameplay: you explore maze-like levels while being chased. you collect important things in a certain order, unlock spells, and use them to break stuff. once you find what you're looking for, you escape and move on. every level gets trickier
+Game engine: godot
+Experience: prev made a platformer for v1 (using godot)
+Other notes:
+Nishtha S.
+
+GAME IDEA -
+GAME NAME : farmer work
+Game Genre: top down ticon
+Description: a game that shows the farmer's work to save his plants and his work
+Features:
+-the player needs to save his farm by killing the aliens that come to kill him
+-the player needs to buy the plants and catch the sheep
+-the player needs to find someone to sell his Vegetables (not everyone wants to buy all the day)
+Gameplay:the player needs to kill the aliens by pressing space button and if he wants to see what did he collect he will press enter button and to go back to the game press left mouse button and he needs to sell his vegetables and sometimes he will catch a sheep or chicken
+Game Engine: godot 4.4.1
+Experience: I made several games in godot
+Noor S.
+
+GAME IDEA
+GAME NAME:
+Game Genre: rpg game
+Description: animated 3d game with VFX, profile system ,inventory management and sprinkle of AI
+Features:
+-the player (can move, attack, animated)
+-monster(simple AI to go from idle, run or attack)
+-inventory, profile and shop
+-some VFX
+Game Engine: godot 4.4.1
+Experience: almost beginner
+Other Notes: goal: create a dynamic engaging and interactive 3d rpg game
+Aamina
+
+GAME IDEA
+Game name: Orpheus: Git Gauntlet
+Game Genre: Action adventure, Open world
+Description: 3d orpheus adventure game. inspired by breath of the wild and donkey kong bananza gameplay. I still haven't written the story but I have ideas.
+Features:
+- interactable world with enemies to fight
+- the hackpad: gives Orpheus abilities
+- collectables
+- hack club references
+Gameplay: exploration, some puzzles, some fighting action, and some story.
+Game Engine: godot
+Experience: I did a lot of past projects and worked on a lot of games, but I haven't used godot yet.
+Other Notes: will require me to try again to learn blender
+Guy
+
+GAME IDEA
+Name: Speed runner
+genre: platformer action
+description: 2d side view game defeat enemies
+features:
+upgrades
+weapons
+new levels
+game engine: godot
+Mohammad
+
+GAME IDEA
+name of game: Seismicat
+type of game: puzzle
+one-liner: a physics-based puzzle game where you control seismic waves to open paths for a cat to escape.
+features:
+- seismic wave control system
+- cooldowns in between bursts
+- cracks that appear along stress points
+gameplay: there will be multiple levels or “rooms”, where the player must control seismic waves to create gaps for a cat to squeeze through in order to move on
+game engine: Godot
+experience: third game!
+other notes: points based on number of “moves” needed to pass a level/room
+KittyCat
+
+Game idea
+name of game: echo nights
+type of game: platformer(like Ori and the will of the wisps)
+one-liner: An adventure game with boss battles, health and challenges to complete
+features:
+easy control with gamepad
+adventure based
+easy challenges
+small battle with enemies(small mutated plants)
+final boss battle
+gameplay: there will be a two levels or so (depends) where the player will complete small challenges to complete to move on with a dungeon feel where you will fight mutated plants and later at end game fight a final boss
+game engine: unity
+experience: none
+other notes: will have a fun game play to it
+Hugo B.
+
+GAME IDEA
+Game name: Amalgame
+Game type: 2D Dungeon Crawler
+One-liner: (Mostly) 2D Dungeon Crawler of many mixed-in genres, and an extremely inconsistent artstyle.
+Features:
+Dungeon Crawling Combat!
+Similar to Enter the Gungeon, but with more emphasis on melee combat!
+Random Generation!
+Upgrade system!
+Shopkeeping!
+Lore! (Balance buries a mountain...)
+A protagonist that is neither the hero nor represents you!
+Extremely inconsistent artstyle!:
+Pixel Art! (Frame by Frame Animation)
+Green Screen!
+Tweening!
+3D models!
+And Ragdolls!
+Will scope freak destroy me? Most likely!
+Gameplay: Players would go through a dungeon, doing battle (or fleeing) in a action-based combat system.
+Game engine: Godot 4.x
+Experience: I've worked on a few different games before, and I've played around with Godot for a few months now. I'm fairly comfortable with the engine, and I could definitely lend a hand to any beginners here. :)
+Other notes: I'd like to also write some other games giving this one some inspiration: Enter The Gungeon, Nobody Saves The World, DemonTower (from Night in the Woods), Hyper Light Drifter, The Legend of Zelda (the original from the 1900s + Link's Awakening), Rogue (The original one)
+BlueDragon_space
+
+GAME IDEA
+Game Name: Radar
+Game Genre: 1 Player Shooter
+Description: You are trapped in the sea of darkness and can only hear the enemies coming but can't see them.
+Features:
+- Upgradeable weapons
+- Animations for things like spawn
+- Muzzle flash to show enemies briefly
+Gameplay: You get into the game and start hearing tiny radio signals of enemies and as you keep defeating more and more your score goes up but the enemies are faster and more difficult to defeat. You will also have options to upgrade your weapons as well.
+Game Engine: Godot
+Experience: none :skulk: never made full game
+Other Notes: I might be cooked idk game design
+Nachu T.
+
+GAME IDEA
+Game name: Echoes of Eternity
+Game type: Action Roguelike
+One-liner: Survive an AI-generated world: Infinite enemy designs, randomized loot, and ever-shifting challenges
+Features:
+Procedural Enemies: Randomized enemy designs with unique attack patterns and stats (e.g., fast-moving "Shadows" vs. slow-but-tough "Golems").
+Adaptive Difficulty: Dynamic scaling of enemy aggression and health based on player performance (e.g., tougher bosses after repeated losses).
+Diverse Loot: Weapon/armor variations with distinct combat effects (e.g., fire swords, energy shields, critical strike boosts).
+Maze-Like Levels: Algorithmically generated layouts with hidden secrets and branching paths.
+Run-Based Progression: Unlock permanent upgrades (health boosts, critical strike chance) between deaths.
+Survival Combat: Dodge/attack timing system with controller-friendly inputs (e.g., A/B for attack, L/R for abilities).
+Console Optimization: 2D sprites, 60 FPS cap, and battery-efficient design for handheld play.
+Leaderboards: Track top scores for competitive replayability.
+Gameplay: Example Run: Start: Choose a class (rogue, mage). Generate Level: Procedural algorithm creates a maze with enemies/loot. Combat: Dodge attacks, collect loot (e.g., "Plasma Blade"), defeat bosses. Death/Restart: Unlock new abilities and retry with enhanced stats.
+Game engine: Godot
+Experience: Developed some games using pygame first time will use godot for making game
+Anant
+
+GAME IDEA
+name of game: Lost Light
+type of game: platformer
+one-liner: a platformer where you must collect scattered light orbs to restore power to a darkened world.
+features:
+light-based mechanics (e.g. light reveals hidden platforms)
+collectible orbs that unlock new areas
+basic enemy avoidance
+gameplay: the player navigates through increasingly challenging levels, collecting orbs that power up the environment and open new sections. Light reveals hidden platforms and dangers, encouraging exploration.
+game engine: Godot
+experience: beginner
+other notes: i'm using the Godot platformer starter guide to start my game
+Bishal S.
+
+GAME IDEA
+Game name: Math game (Undecided)
+Game type: Puzzel Platformer
+One-liner: Use equations to navigate the level which is a graph
+Features:
+2d platforming
+ability to create linear equation graphics(maybe sin/cos and parabolas)
+Gameplay: you go through each level using math equations to solve puzzels and navigate the world
+Game engine: Godot
+Experience: i have made games in godot
+Other notes:
+ViviTheQueen
+
+GAME IDEA
+Name - Blade Of Light
+Genre - Hollow knight inspired metroidvania
+One-liner - 2D combat-platformer with sekiro inspired combat mechanics
+Features:
+-Smooth combat
+-Complex movement options
+-Difficult boss fights
+Gameplay - Platform through a dark world and light it up, obtain new abilities and challenge strong foes. Play as a moth samurai and fight with parrying and movement
+Game Engine - Godot
+Experience - Beginner
+Jacob H.
+
+GAME IDEA
+name of game: Swiveling Escape Remake
+type of game: puzzle platformer
+one-liner: remake of my platformer where you have to rotate to move instead of linear translation
+features:
+- get that torques
+- amazingly simple puzzle
+- the ninjas are back
+gameplay: there will be 5 levels and the player goes through the maze-like map, rotating, lookin for keys to unlock doors, maybe discovering the story
+game engine: Unity
+experience: 36th itch game!
+other notes: torqueeeeeeeeeeeee
+Alimad
