@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PROJECTS PAGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/j-favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .project-block {
+        display: flex;
+        flex-direction: row;
+        background-color: #222c5c;
+        padding: 1em;
+        border-radius: 16px;
+        gap: 30px;
+        align-items: flex-start;
+      }
+      .project-block > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-block img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .project-block h3 {
+        margin: 0.5em 0 0.2em 0;
+        font-size: 1.3em;
+      }
+      .project-block p {
+        font-size: 1em;
+        color: #e0e0e0;
+        margin: 0.2em 0;
+      }
+      .project-block ul {
+        margin: 0.5em 0;
+        padding-left: 1.5em;
+        color: #e0e0e0;
+      }
+      .project-block li {
+        margin: 0.2em 0;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="short-header">
+      <h1>PROJECTS</h1>
+      <p>Check out others' projects!</p>
+      <span>
+        <img src="assets/dino_wow.png" />
+        <img src="assets/jumpstart-v1-collage.png" />
+      </span>
+    </header>
+
+    <section id="info">
+      <h1>Catalogue</h1>
+    </section>
+
+    <footer>
+      <p>© Made with 💖 by Estella Gu</p>
+      <p style="font-size: 75%">
+        <strong>This</strong> page made with 💖 by Rohan V‑F!
+      </p>
+      <p style="font-size: 75%">
+        <strong>Dynamic project showcase</strong> made with 💖 by Dumi
+      </p>
+    </footer>
+    <script src="projects.js"></script>
+  </body>
+</html>
