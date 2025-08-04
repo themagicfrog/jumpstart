@@ -71,7 +71,6 @@
         const data = await response.json();
         games = data.records.map(record => record.fields);
         
-        // Update game count
         const gameCountEl = document.getElementById('game-count');
         gameCountEl.textContent = `We have ${games.length} games and counting!`;
         
