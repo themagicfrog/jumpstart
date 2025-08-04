@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Gallery scroll arrow logic
   const galleryScroll = document.getElementById('gallery-scroll');
   const galleryNext = document.getElementById('gallery-next');
   if (galleryScroll && galleryNext) {
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const card = galleryScroll.querySelector('.gallery-card');
       if (card) {
         galleryScroll.scrollBy({
-          left: card.offsetWidth + 32, // 32px gap
+          left: card.offsetWidth + 32,  
           behavior: 'smooth'
         });
       }
