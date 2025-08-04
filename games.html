@@ -42,6 +42,10 @@
     
     let games = [];
     
+    const AIRTABLE_API_KEY = 'patt6KWDRA5KaDagO.c21a03208d4fef003dccc366bbf55a3f69b31b885e4cfe21aa7fd288b61cb5c6';
+    const AIRTABLE_BASE_ID = 'app9mhT3pKbYTrrYS';
+    const AIRTABLE_TABLE_NAME = 'Gallery Projects';
+    
     async function loadGames() {
       const loadingEl = document.getElementById('loading');
       const errorEl = document.getElementById('error');
@@ -52,7 +56,13 @@
       gamesGridEl.style.display = 'none';
       
       try {
-        const response = await fetch('https://jumpstart-eucjvklny-themagicfrogs-projects.vercel.app/api/games');
+        const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`;
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
         
         if (!response.ok) {
           throw new Error('Failed to fetch games');
