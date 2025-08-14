@@ -367,6 +367,17 @@ details[open] > summary {
 }
 
 /* Games Page Styles */
+.intro-section {
+  color: white;
+  font-size: 1.3em;
+  padding: 0 0.1em !important;
+}
+
+.intro-section p {
+  color: white;
+  font-size: 1.3em;
+}
+
 #games-gallery {
   padding: 2em 4em;
   background-color: #100a52;
@@ -498,6 +509,39 @@ details[open] > summary {
 
 .first-game-tag {
   background: #ea4386;
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.art-tag {
+  background: #9c27b0;
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.music-tag {
+  background: #9c27b0;
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.all-assets-tag {
+  background: #4caf50;
   color: white;
   padding: 0.3em 0.8em;
   border-radius: 20px;
@@ -992,6 +1036,17 @@ details[open] > summary {
   .nav-btn {
     font-size: 5vw;
     padding: 0.8em 1.5em;
+  }
+  
+  .intro-section {
+    max-width: 95vw !important;
+    padding: 0 0.5em !important;
+    margin: 1em auto !important;
+  }
+  
+  .intro-section p {
+    font-size: 4.5vw;
+    line-height: 1.4;
   }
 }
 

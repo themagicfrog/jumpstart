@@ -17,6 +17,12 @@
     <p id="game-count" style="font-size: 1.2em; color: #87CEEB; margin-top: 0.5em;">loading games...</p>
   </header>
 
+  <div class="intro-section" style="max-width: 1300px; margin: 2em auto; text-align: center; line-height: 1.6;">
+          <p>
+        Jumpstart V2 ran from July 9th to August 9th. Hack Clubbers spent 20 hours building video games! You can scroll through all the submitted games here! VOLUME UP!! When you hover over a game, the music from it plays. Check out each game on Itch, Github, Youtube, and the devlog thread in Slack. Also join <a href="https://hackclub.slack.com/archives/C0931T5SEH4" target="_blank" style="color: #ea4386;">#jumpstart</a> and say hi :). Have fun!!
+      </p>
+  </div>
+
   <div id="games-gallery">
     <div class="games-container">
       <div id="loading" class="loading-spinner">
@@ -69,10 +75,24 @@
         }
         
         const data = await response.json();
-        games = data.records.map(record => record.fields);
+        
+        const sortedRecords = data.records.sort((a, b) => {
+          const placeA = a.fields['Place'] || 999;
+          const placeB = b.fields['Place'] || 999;
+          return placeA - placeB;
+        });
+        games = sortedRecords.map(record => record.fields);
+        
+        const countries = new Set();
+        games.forEach(game => {
+          if (game['Country'] && game['Country'].trim()) {
+            countries.add(game['Country'].trim());
+          }
+        });
+        const uniqueCountryCount = countries.size;
         
         const gameCountEl = document.getElementById('game-count');
-        gameCountEl.textContent = `We have ${games.length} games and counting!`;
+        gameCountEl.textContent = `We have ${games.length} games from ${uniqueCountryCount} different countries!`;
         
         if (games.length === 0) {
           showError();
@@ -117,6 +137,15 @@
         const soundFile = game['Sound'] ? (game['Sound'][0]?.url || game['Sound']) : '';
         
         const firstGameTag = game['First Game?'] ? '<span class="first-game-tag">First Game!</span>' : '';
+        
+        let assetTag = '';
+        if (game['Art'] && game['Music']) {
+          assetTag = '<span class="all-assets-tag">All Assets by Creator</span>';
+        } else if (game['Art']) {
+          assetTag = '<span class="art-tag">Art by Creator</span>';
+        } else if (game['Music']) {
+          assetTag = '<span class="music-tag">Music by Creator</span>';
+        }
       
       return `
         <div class="game-card" data-sound="${soundFile}">
@@ -154,9 +183,10 @@
               
               <p class="game-oneliner">${game['One-liner'] || ''}</p>
               
-              <div style="display: flex; justify-content: flex-start; align-items: center; gap: 1em; margin-bottom: 1em;">
+              <div style="display: flex; justify-content: flex-start; align-items: center; gap: 1em; margin-bottom: 1em; flex-wrap: wrap;">
                 ${game['Hours'] ? `<div class="game-hours">${game['Hours']} hours spent</div>` : ''}
                 ${firstGameTag}
+                ${assetTag}
               </div>
               
               ${game['Game Description'] ? `
@@ -228,7 +258,7 @@
           });
           
           card.addEventListener('mouseleave', function() {
-            // Stop sound if playing
+
             const audio = card.querySelector('audio');
             if (audio) {
               audio.pause();
