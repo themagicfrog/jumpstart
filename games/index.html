@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JUMPSTART V2 GAMES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/j-favicon.png">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="short-header">
+    <img src="../assets/jumpstart_title.gif" class="title-animation">
+    <h1>GAME GALLERY!</h1>
+    <h2>Check out all the amazing games made for Jumpstart!</h2>
+    <p id="game-count" style="font-size: 1.2em; color: #87CEEB; margin-top: 0.5em;">loading games...</p>
+  </header>
+
+  <div class="intro-section" style="max-width: 1300px; margin: 2em auto; text-align: center; line-height: 1.6;">
+          <p>
+        Jumpstart V2 ran from July 9th to August 9th. Hack Clubbers spent 20 hours building video games! You can scroll through all the submitted games here! VOLUME UP!! When you hover over a game, the music from it plays. Check out each game on Itch, Github, Youtube, and the devlog thread in Slack. Also join <a href="https://hackclub.slack.com/archives/C0931T5SEH4" target="_blank" style="color: #ea4386;">#jumpstart</a> and say hi :). Have fun!!
+      </p>
+  </div>
+
+  <div id="games-gallery">
+    <div class="games-container">
+      <div id="loading" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>loading games...</p>
+      </div>
+      
+      <div id="error" class="error-message" style="display: none;">
+        <h3>games couldn't load :(, dm @magicfrog on slack</h3>
+        <button class="retry-btn" onclick="loadGames()">Try Again</button>
+      </div>
+      
+      <div id="games-grid" class="games-grid" style="display: none;">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤ by <a href="https://github.com/themagicfrog" target="_blank">Estella Gu</a>.</p>
+  </footer>
+
+  <script>
+    
+    let games = [];
+    
+    const AIRTABLE_API_KEY = 'patt6KWDRA5KaDagO.c21a03208d4fef003dccc366bbf55a3f69b31b885e4cfe21aa7fd288b61cb5c6';
+    const AIRTABLE_BASE_ID = 'app9mhT3pKbYTrrYS';
+    const AIRTABLE_TABLE_NAME = 'Gallery Projects';
+    
+    async function loadGames() {
+      const loadingEl = document.getElementById('loading');
+      const errorEl = document.getElementById('error');
+      const gamesGridEl = document.getElementById('games-grid');
+      
+      loadingEl.style.display = 'flex';
+      errorEl.style.display = 'none';
+      gamesGridEl.style.display = 'none';
+      
+      try {
+        const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`;
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch games');
+        }
+        
+        const data = await response.json();
+        
+        const sortedRecords = data.records.sort((a, b) => {
+          const placeA = a.fields['Place'] || 999;
+          const placeB = b.fields['Place'] || 999;
+          return placeA - placeB;
+        });
+        games = sortedRecords.map(record => record.fields);
+        
+        const countries = new Set();
+        games.forEach(game => {
+          if (game['Country'] && game['Country'].trim()) {
+            countries.add(game['Country'].trim());
+          }
+        });
+        const uniqueCountryCount = countries.size;
+        
+        const gameCountEl = document.getElementById('game-count');
+        gameCountEl.textContent = `We have ${games.length} games from ${uniqueCountryCount} different countries!`;
+        
+        if (games.length === 0) {
+          showError();
+        } else {
+          displayGames(games);
+        }
+        
+      } catch (error) {
+        console.error('Error loading games:', error);
+        showError();
+      }
+    }
+    
+    function showError() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error').style.display = 'block';
+      document.getElementById('games-grid').style.display = 'none';
+    }
+    
+    
+    function displayGames(gamesToShow) {
+      const gamesGridEl = document.getElementById('games-grid');
+      gamesGridEl.style.display = 'grid';
+      document.getElementById('loading').style.display = 'none';
+      
+      gamesGridEl.innerHTML = gamesToShow.map(game => createGameCard(game)).join('');
+      
+      initializeImageCarousels();
+    }
+    
+        function createGameCard(game) {
+ 
+        const coverImage = game['Cover Image'] ? (game['Cover Image'][0]?.url || game['Cover Image']) : '';
+        const additionalImages = game['Additional Images'] ? 
+          (Array.isArray(game['Additional Images']) ? 
+            game['Additional Images'].map(img => img.url || img).filter(Boolean) : 
+            [game['Additional Images']].map(img => img.url || img).filter(Boolean)
+          ) : [];
+        
+        const allImages = [coverImage, ...additionalImages].filter(img => img);
+        
+        const soundFile = game['Sound'] ? (game['Sound'][0]?.url || game['Sound']) : '';
+        
+        const firstGameTag = game['First Game?'] ? '<span class="first-game-tag">First Game!</span>' : '';
+        
+        let assetTag = '';
+        if (game['Art'] && game['Music']) {
+          assetTag = '<span class="all-assets-tag">All Assets by Creator</span>';
+        } else if (game['Art']) {
+          assetTag = '<span class="art-tag">Art by Creator</span>';
+        } else if (game['Music']) {
+          assetTag = '<span class="music-tag">Music by Creator</span>';
+        }
+      
+      return `
+        <div class="game-card" data-sound="${soundFile}">
+          ${soundFile ? `<audio preload="auto" src="${soundFile}"></audio>` : ''}
+          <div class="game-image">
+            ${allImages.length > 0 ? `
+              <div class="image-carousel">
+                <div class="carousel-container">
+                  ${allImages.map((img, index) => `
+                    <img src="${img}" alt="${game['Game Name'] || 'Game'}" class="carousel-image ${index === 0 ? 'active' : ''}" data-index="${index}">
+                  `).join('')}
+                </div>
+                ${allImages.length > 1 ? `
+                  <div class="carousel-dots">
+                    ${allImages.map((_, index) => `
+                      <span class="dot ${index === 0 ? 'active' : ''}" onclick="goToImage(this, ${index})"></span>
+                    `).join('')}
+                  </div>
+                ` : ''}
+              </div>
+            ` : `
+              <div class="placeholder-image">🎮</div>
+            `}
+          </div>
+          
+          <div class="game-info">
+            <h3 class="game-title">${game['Game Name'] || 'Untitled Game'}</h3>
+            <div class="game-content">
+              <div class="game-developer">
+                ${game['Name'] || 'Unknown'} 
+                ${game['Slack Display Name'] ? `(@${game['Slack Display Name']})` : ''}
+                ${game['Age'] ? `, ${game['Age']} years old` : ''}
+                ${game['Country'] ? `, from ${game['Country']}` : ''}
+              </div>
+              
+              <p class="game-oneliner">${game['One-liner'] || ''}</p>
+              
+              <div style="display: flex; justify-content: flex-start; align-items: center; gap: 1em; margin-bottom: 1em; flex-wrap: wrap;">
+                ${game['Hours'] ? `<div class="game-hours">${game['Hours']} hours spent</div>` : ''}
+                ${firstGameTag}
+                ${assetTag}
+              </div>
+              
+              ${game['Game Description'] ? `
+                <details class="game-details">
+                  <summary>Game Description</summary>
+                  <div class="details-content">
+                    ${game['Game Description']}
+                  </div>
+                </details>
+              ` : ''}
+              
+              ${game['Thoughts'] ? `
+                <details class="game-details">
+                  <summary>Creator's Thoughts</summary>
+                  <div class="details-content">
+                    ${game['Thoughts']}
+                  </div>
+                </details>
+              ` : ''}
+              
+              <div class="game-links">
+                ${game['Itch.io link'] ? `<a href="${game['Itch.io link']}" target="_blank" class="game-link itch-link">PLAY HERE!</a>` : ''}
+                ${game['Github repo'] ? `<a href="${game['Github repo']}" target="_blank" class="game-link github-link">View Github Repo</a>` : ''}
+                ${game['Gameplay video'] ? `<a href="${game['Gameplay video']}" target="_blank" class="game-link video-link">Watch Gameplay Video</a>` : ''}
+                ${game['Game thread'] ? `<a href="${game['Game thread']}" target="_blank" class="game-link thread-link">See Devlogs (in thread)</a>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    function initializeImageCarousels() {
+      const gameCards = document.querySelectorAll('.game-card');
+      gameCards.forEach(card => {
+        const carousel = card.querySelector('.image-carousel');
+        const images = carousel?.querySelectorAll('.carousel-image');
+        if (images && images.length > 1) {
+          let currentIndex = 0;
+          let interval;
+          
+          card.addEventListener('mouseenter', function() {
+            const audio = card.querySelector('audio');
+            if (audio) {
+              if (audio.readyState >= 2) { 
+                audio.currentTime = 0;
+                audio.play().catch(e => console.log('Audio play failed:', e));
+              } else {
+                audio.load();
+                audio.addEventListener('canplaythrough', function playAudio() {
+                  audio.currentTime = 0;
+                  audio.play().catch(e => console.log('Audio play failed:', e));
+                  audio.removeEventListener('canplaythrough', playAudio);
+                }, { once: true });
+              }
+            }
+            
+            const nextIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.remove('active');
+            images[nextIndex].classList.add('active');
+            currentIndex = nextIndex;
+            
+            interval = setInterval(function() {
+              const nextIndex = (currentIndex + 1) % images.length;
+              images[currentIndex].classList.remove('active');
+              images[nextIndex].classList.add('active');
+              currentIndex = nextIndex;
+            }, 1500); 
+          });
+          
+          card.addEventListener('mouseleave', function() {
+
+            const audio = card.querySelector('audio');
+            if (audio) {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+            
+            clearInterval(interval);
+            images.forEach((img, index) => {
+              img.classList.toggle('active', index === 0);
+            });
+            currentIndex = 0;
+          });
+        }
+      });
+    }
+    
+    function changeImage(btn, direction) {
+      const carousel = btn.closest('.image-carousel');
+      const container = carousel.querySelector('.carousel-container');
+      const images = container.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.dot');
+      
+      let currentIndex = 0;
+      images.forEach((img, index) => {
+        if (img.classList.contains('active')) {
+          currentIndex = index;
+        }
+      });
+      
+      const newIndex = (currentIndex + direction + images.length) % images.length;
+      
+      images[currentIndex].classList.remove('active');
+      images[newIndex].classList.add('active');
+      
+      dots[currentIndex].classList.remove('active');
+      dots[newIndex].classList.add('active');
+    }
+    
+    function goToImage(dot, index) {
+      const carousel = dot.closest('.image-carousel');
+      const images = carousel.querySelectorAll('.carousel-image');
+      const dots = carousel.querySelectorAll('.dot');
+      
+      images.forEach(img => img.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      
+      images[index].classList.add('active');
+      dot.classList.add('active');
+    }
+    
+    document.addEventListener('DOMContentLoaded', loadGames);
+  </script>
+</body>
+</html> 
