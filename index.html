@@ -10,12 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header style="position: relative;">
+  <header class="header-relative">
     <img src="assets/jumpstart_title.gif" class="title-animation">
-    <p>a beginner-friendly Hack Club YSWS</p>
-    <h2>Build a game for 20 hours in one month from July 9th to August 9th!</h2>
+    <p>a beginner-friendly Hack Club YSWS (ended)</p>
+    <h2>Build a game for 20 hours in one month from July 9th to August 10th!</h2>
     <h2>Earn a high-quality gaming console to run your game!</h2>
-    <img id="gameconsole-img" src="assets/gameconsole.png">
+    <div class="game-button-container">
+      <img src="assets/heidigame.png" class="game-button-image-left">
+      <a href="games/index.html" class="play-all-games-button">
+        PLAY ALL GAMES!
+      </a>
+      <img src="assets/jumpstartstickers-5.png" class="game-button-image-right">
+    </div>
     <audio id="win-sound" src="assets/winsound.wav" preload="auto"></audio>
     <div class="scroll-arrow" onclick="scrollToInfo()" tabindex="0" aria-label="Scroll down" role="button">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,20 +29,68 @@
       </svg>
     </div>
 
-    <div style="position: absolute; display: flex; flex-direction: column; align-items: center; width: min-content; right: 50px; bottom: 20%;">
-      <a href="games.html">
-        <img src="assets/dino_play.png" style="width: 10vw;">
-        <p style="animation: wiggle 2s ease-in-out infinite;
-filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.6)); color: pink;">CHECK OUT SUBMITTED GAMES HERE!</p>
-      </a>
-    </div>
+
   </header>
-  <section id="info">
-    <div style="text-align: center; margin-bottom: 2em;">
-      <a href="projects.html" class="nav-btn" style="display: inline-block; margin: 0 1em;">VIEW IN-PROGRESS GAME IDEAS!</a>
+  
+  <div class="sticker-scroll-container">
+    <div class="sticker-scroll">
+      <img src="assets/stickers/1.png">
+      <img src="assets/stickers/2.png">
+      <img src="assets/stickers/3.png">
+      <img src="assets/stickers/4.png">
+      <img src="assets/stickers/5.png">
+      <img src="assets/stickers/6.png">
+      <img src="assets/stickers/8.png">
+      <img src="assets/stickers/9.png">
+      <img src="assets/stickers/10.png">
+      <img src="assets/stickers/11.png">
+      <img src="assets/stickers/12.png">
+      <img src="assets/stickers/13.png">
+      <img src="assets/stickers/14.png">
+      <img src="assets/stickers/15.png">
+      <img src="assets/stickers/16.png">
+      <img src="assets/stickers/17.png">
+      <img src="assets/stickers/18.png">
+      <img src="assets/stickers/19.png">
+      <img src="assets/stickers/20.png">
+      <img src="assets/stickers/21.png">
+      <img src="assets/stickers/22.png">
+      <img src="assets/stickers/23.png">
+      <img src="assets/stickers/1.png">
+      <img src="assets/stickers/2.png">
+      <img src="assets/stickers/3.png">
+      <img src="assets/stickers/4.png">
+      <img src="assets/stickers/5.png">
+      <img src="assets/stickers/6.png">
+      <img src="assets/stickers/8.png">
+      <img src="assets/stickers/9.png">
+      <img src="assets/stickers/10.png">
+      <img src="assets/stickers/11.png">
+      <img src="assets/stickers/12.png">
+      <img src="assets/stickers/13.png">
+      <img src="assets/stickers/14.png">
+      <img src="assets/stickers/15.png">
+      <img src="assets/stickers/16.png">
+      <img src="assets/stickers/17.png">
+      <img src="assets/stickers/18.png">
+      <img src="assets/stickers/19.png">
+      <img src="assets/stickers/20.png">
+      <img src="assets/stickers/21.png">
+      <img src="assets/stickers/22.png">
+      <img src="assets/stickers/23.png">
     </div>
-    <h2>Overview Poster</h2>
-    <img src="assets/poster.png">
+  </div>
+
+  <section id="info">
+    <h2>Jumpstart Poster and Zorp Poster</h2>
+    <div class="poster-container">
+      <div class="poster-item">
+        <img src="assets/poster.png" alt="Jumpstart Poster">
+      </div>
+      <div class="poster-item">
+        <img src="assets/zorpposter.png" alt="Zorp Poster">
+      </div>
+    </div>
     
     <div class="step-container">
       <div class="step-content">
@@ -46,9 +100,9 @@ filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba
         <p>If you need a start, go to <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1's website</a> and there is a comprehensive beginner-friendly guide to get you started on making a platformer in Godot.</p>
         <p>Once you have an idea for your game, post a message in the #jumpstart channel with a one-liner for your game, a couple features you want to add, the game engine you will be using, if you've done game dev before, and any other ideas about your game that you have.</p>
         <p>If you are using the Godot platformer starter guide, you can post "i'm using the Godot platformer starter guide to start my game" for your game idea, but still make sure to include a GAME IDEA title. If you participated in Jumpstart V1, you can post your current game state in format of the 10-hour update message below.</p>
-        <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
-          <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
+        <details class="details-margin">
+          <summary class="details-summary">Example Message (must be in the format shown)</summary>
+          <pre class="details-pre">
 GAME IDEA
 name of game: signal lost
 type of game: platformer
@@ -93,9 +147,9 @@ other notes: something like Celeste, pixel art style, fast-paced
          <p>If you need a start, go to <a href="http://v1.jumpstart.hackclub.com/" target="_blank">Jumpstart V1's website</a> and there are many beginner-friendly guides to get you started on making a platformer in Godot.</p>
         <p>Once you hit 10 hours, you must post a message in the thread of your original game idea post in #jumpstart and send to channel. It must have your GitHub repository linked, a screen-recording of your gameplay, a list of what features you added, what the most challenging thing was, and what you are planning on adding next. </p>
         <p>Optionally, you can spend 10 more hours (30 hours total) to earn an epic, exclusive Jumpstart stickersheet along with your console!</p>
-        <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
-          <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
+        <details class="details-margin">
+          <summary class="details-summary">Example Message (must be in the format shown)</summary>
+          <pre class="details-pre">
 10-HOUR UPDATE
 github repo: https://github.com/themagicfrog/signal-lost
 itch.io link: (if available)
@@ -119,9 +173,9 @@ next up: add more levels, add aliens??, make some cool effects
         <h3>3. Ship Your Project</h3>
         <p>Upload your game to <a href="https://itch.io/" taraget="_blank">Itch.io</a>, a website where people share and play video games. Make an account, export your game, and publish it to the world. Also, you'll need to record a gameplay video of you playing through your entire game and publish it on YouTube. </p>
         <p>Share your project in #jumpstart with an Itch link, gameplay video, total hours spent, a description, list of features, and your game-making process.</p>
-        <details style="margin: 1em 0;">
-          <summary style="font-weight: bold; cursor: pointer;">Example Message (must be in the format shown)</summary>
-          <pre style="background: #222c5c; color: #fff; padding: 1em; border-radius: 8px; white-space: pre-wrap; font-family: inherit;">
+        <details class="details-margin">
+          <summary class="details-summary">Example Message (must be in the format shown)</summary>
+          <pre class="details-pre">
 SHIP POST
 github repo: https://github.com/themagicfrog/signal-lost
 itch.io: https://themagicfrog.itch.io/signal-lost

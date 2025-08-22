@@ -15,7 +15,7 @@ async function fetchAllProjects(offset = '') {
 function renderProjects(records) {
     const section = document.getElementById('info');
 
-    // Create or clear the project list container
+
     let list = section.querySelector('.project-list');
     if (!list) {
         list = document.createElement('div');
@@ -31,7 +31,7 @@ function renderProjects(records) {
         const block = document.createElement('div');
         block.className = 'project-block';
 
-        // First column: Image, title, one-liner, author
+
         const firstCol = document.createElement('div');
 
         const img = document.createElement('img');
@@ -50,7 +50,7 @@ function renderProjects(records) {
         pMember.innerHTML = `Made by <u>${f.Member.replace(/^@/, '')}</u>`;
         firstCol.appendChild(pMember);
 
-        // Second column: Features, Genre, Game Engine, Experience
+
         const secondCol = document.createElement('div');
 
         const featuresH3 = document.createElement('h3');
@@ -82,7 +82,7 @@ function renderProjects(records) {
         pExperience.textContent = `Experience: ${f.Experience || 'Unknown'}`;
         secondCol.appendChild(pExperience);
 
-        // Third column: Gameplay and Other Notes
+
         const thirdCol = document.createElement('div');
 
         const pGameplay = document.createElement('p');
@@ -93,7 +93,7 @@ function renderProjects(records) {
         pNotes.textContent = `Other Notes: ${f["Other Notes"] || 'None'}`;
         thirdCol.appendChild(pNotes);
 
-        // Add all columns to block
+
         block.appendChild(firstCol);
         block.appendChild(secondCol);
         block.appendChild(thirdCol);
